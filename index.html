@@ -3,62 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iqra Zia · Portfolio</title>
+<title>Iqra Zia | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 :root{
-  --bg:#070b14;
-  --panel:#111a2f;
-  --panel2:#0d1426;
-  --text:#e8ecf3;
-  --muted:#9aa3b2;
-  --accent:#4cc9f0;
-  --accent2:#7c5cff;
+  --bg:#060913;
+  --card:rgba(255,255,255,0.06);
+  --border:rgba(255,255,255,0.08);
+  --text:#EAF0FF;
+  --muted:#A7B0C0;
+  --accent:#6C63FF;
+  --accent2:#00D4FF;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif;}
-
+*{margin:0;padding:0;box-sizing:border-box;}
 body{
-  background:radial-gradient(circle at top,#132042 0%,var(--bg) 50%);
+  font-family:Inter,sans-serif;
+  background:radial-gradient(circle at top,#0C1228,#060913);
   color:var(--text);
 }
 
 /* NAV */
 nav{
+  position:sticky;top:0;
+  backdrop-filter:blur(18px);
+  background:rgba(6,9,19,0.7);
   display:flex;
   justify-content:space-between;
-  padding:18px 60px;
-  position:sticky;
-  top:0;
-  background:rgba(7,11,20,0.75);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(255,255,255,0.06);
-  z-index:100;
-}
-.logo{
-  font-weight:700;
-  color:var(--accent);
-  letter-spacing:1px;
+  padding:18px 40px;
+  border-bottom:1px solid var(--border);
 }
 nav a{
-  margin-left:22px;
-  text-decoration:none;
   color:var(--muted);
-  font-size:.85rem;
+  text-decoration:none;
+  margin-left:18px;
+  font-size:13px;
 }
-nav a:hover{color:var(--accent);}
+nav a:hover{color:var(--accent2);}
+.logo{color:var(--accent2);font-weight:700;}
 
 /* HERO */
 .hero{
-  padding:120px 60px 80px;
+  padding:90px 40px;
   max-width:1100px;
+  margin:auto;
 }
 .hero h1{
-  font-size:3.8rem;
-  font-weight:700;
+  font-size:48px;
 }
 .hero span{
   background:linear-gradient(90deg,var(--accent),var(--accent2));
@@ -66,42 +59,36 @@ nav a:hover{color:var(--accent);}
   -webkit-text-fill-color:transparent;
 }
 .hero p{
-  margin-top:15px;
+  margin-top:12px;
   color:var(--muted);
-  max-width:750px;
-  line-height:1.7;
+  max-width:650px;
+  line-height:1.6;
 }
 
 /* SECTION */
 section{
-  padding:80px 60px;
+  padding:70px 40px;
   max-width:1100px;
   margin:auto;
 }
 .title{
-  font-size:1.6rem;
+  color:var(--accent2);
+  margin-bottom:20px;
   font-weight:600;
-  margin-bottom:25px;
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-.title::before{
-  content:"";
-  width:6px;
-  height:22px;
-  background:linear-gradient(var(--accent),var(--accent2));
-  border-radius:4px;
+  letter-spacing:1px;
 }
 
-/* BOX */
+/* ABOUT */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
 .box{
-  background:linear-gradient(145deg,var(--panel),var(--panel2));
-  padding:22px;
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:18px;
   border-radius:14px;
-  border:1px solid rgba(255,255,255,0.06);
-  color:var(--muted);
-  line-height:1.8;
 }
 
 /* SKILLS */
@@ -110,60 +97,45 @@ section{
   flex-wrap:wrap;
   gap:10px;
 }
-.skill{
+.tag{
   padding:8px 14px;
   border-radius:20px;
-  background:rgba(76,201,240,0.08);
-  border:1px solid rgba(76,201,240,0.2);
-  color:var(--accent);
-  font-size:.8rem;
+  background:rgba(108,99,255,0.12);
+  border:1px solid rgba(108,99,255,0.3);
+  font-size:13px;
 }
 
-/* PROJECTS (IMPORTANT PART KEPT FULL) */
-.grid{
+/* PROJECTS */
+.projects{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:18px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:14px;
 }
-.card{
-  background:linear-gradient(145deg,var(--panel),var(--panel2));
-  padding:18px;
+.project{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:16px;
   border-radius:14px;
-  border:1px solid rgba(255,255,255,0.06);
   transition:.3s;
 }
-.card:hover{
+.project:hover{
   transform:translateY(-6px);
-  border-color:rgba(76,201,240,0.5);
+  border-color:var(--accent2);
 }
-.card h3{
-  color:var(--accent);
-  font-size:1rem;
-  margin-bottom:8px;
-}
-.card p{
-  color:var(--muted);
-  font-size:.9rem;
-  line-height:1.5;
-}
-.card a{
-  display:inline-block;
-  margin-top:10px;
-  color:var(--accent2);
-  text-decoration:none;
-  font-size:.85rem;
-}
+.project h3{font-size:15px;margin-bottom:6px;}
+.project p{font-size:13px;color:var(--muted);line-height:1.5;}
 
 /* CONTACT */
 .contact{
-  background:var(--panel);
-  padding:22px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,0.06);
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
 }
-.contact a{
-  color:var(--accent);
-  text-decoration:none;
+.contact div{
+  background:var(--card);
+  padding:16px;
+  border-radius:14px;
+  border:1px solid var(--border);
 }
 
 /* FOOTER */
@@ -171,8 +143,7 @@ footer{
   text-align:center;
   padding:25px;
   color:var(--muted);
-  font-size:.8rem;
-  border-top:1px solid rgba(255,255,255,0.06);
+  border-top:1px solid var(--border);
 }
 </style>
 </head>
@@ -189,105 +160,100 @@ footer{
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
-  <h1>Iqra Zia</h1>
-  <p>
-    Computer Science Student · Backend Developer · Problem Solver  
-    Building structured systems using C++, Java, Python, SQL and Data Structures.
-  </p>
+  <h1>Hello, I'm <span>Iqra Zia</span></h1>
+  <p>Computer Science student at Fatima Jinnah Women University. Passionate about programming, problem solving, and building real-world systems using C, C++, Java, Python, SQL and more.</p>
 </div>
 
-<!-- ABOUT -->
 <section id="about">
-  <div class="title">About Me</div>
-  <div class="box">
-    I am a Computer Science student passionate about backend development, data structures, and system-level problem solving.  
-    I focus on building logical, efficient, and scalable solutions using programming and database concepts.  
-    My strength lies in understanding core computer science concepts and applying them in real projects.
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="title">Skills</div>
-  <div class="skills">
-    <div class="skill">C</div>
-    <div class="skill">C++</div>
-    <div class="skill">Java</div>
-    <div class="skill">Python</div>
-    <div class="skill">SQL / Oracle</div>
-    <div class="skill">Data Structures</div>
-    <div class="skill">OOP</div>
-    <div class="skill">Computer Networks</div>
-    <div class="skill">COAL</div>
-    <div class="skill">Digital Logic Design</div>
-  </div>
-</section>
-
-<!-- PROJECTS (FULL + LINKS PRESERVED) -->
-<section id="projects">
-  <div class="title">Projects</div>
-
+  <div class="title">ABOUT ME</div>
   <div class="grid">
-
-    <div class="card">
-      <h3>Expression Converter</h3>
-      <p>Stack based expression evaluator.</p>
-      <a href="https://github.com/iqra0516/Expression-Converter-Evaluator-Using-Stack-Only-">GitHub Link</a>
+    <div class="box">
+      I am currently studying BS Computer Science at Fatima Jinnah Women University. I enjoy coding, learning new technologies and building academic and real-world projects.
     </div>
-
-    <div class="card">
-      <h3>Customer Service System</h3>
-      <p>Queue based management system.</p>
-      <a href="https://github.com/iqra0516/Customer-Service-Management-System-Using-Queue">GitHub Link</a>
+    <div class="box">
+      <b>University:</b> Fatima Jinnah Women University <br>
+      <b>Semester:</b> 4th Semester <br>
+      <b>Hobbies:</b> Coding, Reading, Exploring Tech
     </div>
+  </div>
+</section>
 
-    <div class="card">
-      <h3>Student Record System</h3>
-      <p>Linked list based record system.</p>
-      <a href="https://github.com/iqra0516/Student-Record-Management-System-Using-Linked-List-Only-">GitHub Link</a>
-    </div>
+<section id="skills">
+  <div class="title">SKILLS</div>
+  <div class="skills">
+    <div class="tag">C</div>
+    <div class="tag">C++</div>
+    <div class="tag">Java</div>
+    <div class="tag">Python</div>
+    <div class="tag">SQL</div>
+    <div class="tag">Computer Networks</div>
+    <div class="tag">Digital Logic</div>
+    <div class="tag">COAL</div>
+  </div>
+</section>
 
-    <div class="card">
-      <h3>HR Schema</h3>
-      <p>SQL database schema project.</p>
-      <a href="https://github.com/iqra0516/HR-schema">GitHub Link</a>
-    </div>
+<section id="projects">
+  <div class="title">PROJECTS</div>
+  <div class="projects">
 
-    <div class="card">
-      <h3>SCOTT Schema</h3>
-      <p>Database practice project.</p>
-      <a href="https://github.com/iqra0516/scott-schema">GitHub Link</a>
-    </div>
-
-    <div class="card">
+    <div class="project">
       <h3>Sports Management System</h3>
-      <p>Java + Oracle based system.</p>
-      <a href="https://github.com/iqra0516/sportsmanagementsystem">GitHub Link</a>
+      <p>OOP-based system to manage players, teams, matches and leagues using Java/C++ and Oracle database.</p>
     </div>
 
-    <div class="card">
-      <h3>Mathematical Problem Solving</h3>
-      <p>Algorithm-based Python solutions.</p>
-      <a href="https://github.com/iqra0516/mathematical-problem-solving">GitHub Link</a>
+    <div class="project">
+      <h3>Bank Account System</h3>
+      <p>Java OOP project for banking operations including deposit, withdrawal and account management.</p>
+    </div>
+
+    <div class="project">
+      <h3>Library Management System</h3>
+      <p>SQL-based system for managing books, users and transactions.</p>
+    </div>
+
+    <div class="project">
+      <h3>COAL Assembly Projects</h3>
+      <p>Assembly language programs for arithmetic and logical operations.</p>
+    </div>
+
+    <div class="project">
+      <h3>Linked List Student System</h3>
+      <p>Student record system using linked list with insert, delete and search operations.</p>
+    </div>
+
+    <div class="project">
+      <h3>Queue Management System</h3>
+      <p>Customer service system using queue data structure with priority handling.</p>
     </div>
 
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-  <div class="title">Contact</div>
+  <div class="title">CONTACT</div>
   <div class="contact">
-    <p>Email: <a href="mailto:iqrazia16175@gmail.com">iqrazia16175@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/iqra0516">github.com/iqra0516</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/iqra-zia-891704294">linkedin.com/in/iqra-zia-891704294</a></p>
+
+    <div>
+      <b>Email</b><br>
+      <span style="color:var(--muted)">your email here</span>
+    </div>
+
+    <div>
+      <b>GitHub</b><br>
+      <span style="color:var(--muted)">github.com/your-profile</span>
+    </div>
+
+    <div>
+      <b>LinkedIn</b><br>
+      <span style="color:var(--muted)">linkedin.com/in/your-profile</span>
+    </div>
+
   </div>
 </section>
 
 <footer>
-  © 2026 Iqra Zia · Computer Science Portfolio
+  © 2026 Iqra Zia · CS Portfolio
 </footer>
 
 </body>
