@@ -5,145 +5,172 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Iqra Zia | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
 :root{
-  --bg:#060913;
+  --bg:#070a14;
   --card:rgba(255,255,255,0.06);
-  --border:rgba(255,255,255,0.08);
-  --text:#EAF0FF;
-  --muted:#A7B0C0;
-  --accent:#6C63FF;
-  --accent2:#00D4FF;
+  --border:rgba(255,255,255,0.10);
+  --text:#eef2ff;
+  --muted:#9aa3b2;
+  --accent:#7c3aed;
+  --accent2:#06b6d4;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
 body{
-  font-family:Inter,sans-serif;
-  background:radial-gradient(circle at top,#0C1228,#060913);
+  background:radial-gradient(circle at top,#0f1630,#070a14);
   color:var(--text);
 }
 
 /* NAV */
 nav{
-  position:sticky;top:0;
-  backdrop-filter:blur(18px);
-  background:rgba(6,9,19,0.7);
   display:flex;
   justify-content:space-between;
-  padding:18px 40px;
+  align-items:center;
+  padding:1rem 2rem;
+  position:sticky;
+  top:0;
+  backdrop-filter:blur(18px);
+  background:rgba(7,10,20,0.7);
   border-bottom:1px solid var(--border);
 }
-nav a{
+.nav-logo{font-weight:600;color:var(--accent);letter-spacing:1px;}
+.nav-links a{
+  margin-left:1.5rem;
   color:var(--muted);
   text-decoration:none;
-  margin-left:18px;
   font-size:13px;
 }
-nav a:hover{color:var(--accent2);}
-.logo{color:var(--accent2);font-weight:700;}
+.nav-links a:hover{color:var(--text);}
 
 /* HERO */
 .hero{
-  padding:90px 40px;
-  max-width:1100px;
-  margin:auto;
+  text-align:center;
+  padding:6rem 2rem;
 }
-.hero h1{
-  font-size:48px;
-}
+.hero h1{font-size:3rem;}
 .hero span{
   background:linear-gradient(90deg,var(--accent),var(--accent2));
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 .hero p{
-  margin-top:12px;
   color:var(--muted);
-  max-width:650px;
-  line-height:1.6;
+  max-width:600px;
+  margin:1rem auto;
+  line-height:1.7;
+}
+
+/* BUTTONS */
+.btn{
+  padding:.7rem 1.4rem;
+  border-radius:30px;
+  margin:.5rem;
+  display:inline-block;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
+}
+.primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:white;
+}
+.primary:hover{transform:translateY(-2px);}
+.outline{
+  border:1px solid var(--accent);
+  color:var(--accent);
+}
+.outline:hover{
+  background:var(--accent);
+  color:white;
 }
 
 /* SECTION */
 section{
-  padding:70px 40px;
+  padding:4rem 2rem;
   max-width:1100px;
   margin:auto;
 }
-.title{
-  color:var(--accent2);
-  margin-bottom:20px;
-  font-weight:600;
-  letter-spacing:1px;
+.section-title{
+  font-size:1.8rem;
+  margin-bottom:1.5rem;
 }
 
-/* ABOUT */
+/* GRID */
 .grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
+  gap:1rem;
 }
-.box{
+
+/* CARDS */
+.card{
   background:var(--card);
   border:1px solid var(--border);
-  padding:18px;
   border-radius:14px;
+  padding:1rem;
+  transition:.3s;
+  backdrop-filter:blur(10px);
+}
+.card:hover{
+  transform:translateY(-6px);
+  border-color:var(--accent);
 }
 
 /* SKILLS */
 .skills{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 }
-.tag{
-  padding:8px 14px;
-  border-radius:20px;
-  background:rgba(108,99,255,0.12);
-  border:1px solid rgba(108,99,255,0.3);
-  font-size:13px;
+.card i{
+  font-size:1.6rem;
+  color:var(--accent);
+  margin-bottom:.5rem;
 }
 
 /* PROJECTS */
 .projects{
-  display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:14px;
 }
-.project{
-  background:var(--card);
-  border:1px solid var(--border);
-  padding:16px;
-  border-radius:14px;
-  transition:.3s;
+.project-card h3{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:15px;
 }
-.project:hover{
-  transform:translateY(-6px);
-  border-color:var(--accent2);
+.project-card p{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:6px;
 }
-.project h3{font-size:15px;margin-bottom:6px;}
-.project p{font-size:13px;color:var(--muted);line-height:1.5;}
+.project-card a{
+  display:inline-block;
+  margin-top:10px;
+  color:var(--accent);
+  font-size:13px;
+  text-decoration:none;
+}
 
 /* CONTACT */
-.contact{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:12px;
-}
-.contact div{
+.contact-card{
   background:var(--card);
-  padding:16px;
-  border-radius:14px;
   border:1px solid var(--border);
+  padding:1rem;
+  border-radius:12px;
+  margin-bottom:1rem;
+  display:flex;
+  align-items:center;
+  gap:.6rem;
 }
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:25px;
+  padding:2rem;
   color:var(--muted);
-  border-top:1px solid var(--border);
+  font-size:13px;
 }
 </style>
 </head>
@@ -151,110 +178,155 @@ footer{
 <body>
 
 <nav>
-  <div class="logo">IQRA ZIA</div>
-  <div>
+  <div class="nav-logo">Iqra Zia</div>
+  <div class="nav-links">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
   <h1>Hello, I'm <span>Iqra Zia</span></h1>
-  <p>Computer Science student at Fatima Jinnah Women University. Passionate about programming, problem solving, and building real-world systems using C, C++, Java, Python, SQL and more.</p>
+  <p>Computer Science Student | Backend Developer | Problem Solver</p>
+  <a href="#projects" class="btn primary">Projects</a>
+  <a href="#contact" class="btn outline">Contact</a>
 </div>
 
+<!-- ABOUT (UNCHANGED TEXT) -->
 <section id="about">
-  <div class="title">ABOUT ME</div>
-  <div class="grid">
-    <div class="box">
-      I am currently studying BS Computer Science at Fatima Jinnah Women University. I enjoy coding, learning new technologies and building academic and real-world projects.
-    </div>
-    <div class="box">
-      <b>University:</b> Fatima Jinnah Women University <br>
-      <b>Semester:</b> 4th Semester <br>
-      <b>Hobbies:</b> Coding, Reading, Exploring Tech
-    </div>
+  <h2 class="section-title">About Me</h2>
+  <p style="color:var(--muted);line-height:1.8;">
+    I am a passionate Computer Science student with a strong interest in solving real-world problems using efficient algorithms and data structures. I enjoy building backend systems and working with databases to design scalable and optimized solutions. My academic journey has strengthened my concepts in OOP, SQL, and system design. I am continuously exploring cloud technologies like Microsoft Azure to expand my technical skills. I believe in learning by building, and I actively work on projects to enhance my practical knowledge. My goal is to grow as a software engineer and contribute to impactful and innovative solutions.
+  </p>
+</section>
+
+<!-- HOBBIES -->
+<section id="hobbies">
+  <h2 class="section-title">Hobbies & Interests</h2>
+  <div class="grid skills">
+    <div class="card"><i class="fas fa-baseball-ball"></i><p>Playing Cricket</p></div>
+    <div class="card"><i class="fas fa-book"></i><p>Reading</p></div>
+    <div class="card"><i class="fas fa-brain"></i><p>Problem Solving</p></div>
+    <div class="card"><i class="fas fa-laptop-code"></i><p>Coding Practice</p></div>
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
-  <div class="title">SKILLS</div>
-  <div class="skills">
-    <div class="tag">C</div>
-    <div class="tag">C++</div>
-    <div class="tag">Java</div>
-    <div class="tag">Python</div>
-    <div class="tag">SQL</div>
-    <div class="tag">Computer Networks</div>
-    <div class="tag">Digital Logic</div>
-    <div class="tag">COAL</div>
+  <h2 class="section-title">Skills</h2>
+  <div class="grid skills">
+    <div class="card"><i class="fas fa-code"></i><p>C/C++</p></div>
+    <div class="card"><i class="fab fa-java"></i><p>Java</p></div>
+    <div class="card"><i class="fab fa-python"></i><p>Python</p></div>
+    <div class="card"><i class="fas fa-database"></i><p>SQL</p></div>
+    <div class="card"><i class="fab fa-html5"></i><p>HTML/CSS</p></div>
+    <div class="card"><i class="fas fa-project-diagram"></i><p>Data Structures</p></div>
+    <div class="card"><i class="fab fa-microsoft"></i><p>Azure</p></div>
   </div>
 </section>
 
+<!-- EDUCATION -->
+<section id="education">
+  <h2 class="section-title">Education</h2>
+
+  <div class="card">
+    <p><b>BCS — Computer Science</b><br>Fatima Jinnah Women University (2024–Present)</p>
+  </div>
+
+  <div class="card">
+    <p><b>ICS (Intermediate)</b><br>Completed</p>
+  </div>
+
+  <div class="card">
+    <p><b>Matric — Science</b><br>Completed</p>
+  </div>
+</section>
+
+<!-- PROJECTS (UNCHANGED LINKS + NAMES) -->
 <section id="projects">
-  <div class="title">PROJECTS</div>
-  <div class="projects">
+  <h2 class="section-title">Projects</h2>
 
-    <div class="project">
-      <h3>Sports Management System</h3>
-      <p>OOP-based system to manage players, teams, matches and leagues using Java/C++ and Oracle database.</p>
+  <div class="grid projects">
+
+    <div class="card project-card">
+      <h3><i class="fas fa-calculator"></i> Expression Converter</h3>
+      <p>Stack based expression evaluator</p>
+      <a href="https://github.com/iqra0516/Expression-Converter-Evaluator-Using-Stack-Only-">View</a>
     </div>
 
-    <div class="project">
-      <h3>Bank Account System</h3>
-      <p>Java OOP project for banking operations including deposit, withdrawal and account management.</p>
+    <div class="card project-card">
+      <h3><i class="fas fa-users"></i> Customer Service System</h3>
+      <p>Queue based management system</p>
+      <a href="https://github.com/iqra0516/Customer-Service-Management-System-Using-Queue">View</a>
     </div>
 
-    <div class="project">
-      <h3>Library Management System</h3>
-      <p>SQL-based system for managing books, users and transactions.</p>
+    <div class="card project-card">
+      <h3><i class="fas fa-user-graduate"></i> Student Record System</h3>
+      <p>Linked list based records</p>
+      <a href="https://github.com/iqra0516/Student-Record-Management-System-Using-Linked-List-Only-">View</a>
     </div>
 
-    <div class="project">
-      <h3>COAL Assembly Projects</h3>
-      <p>Assembly language programs for arithmetic and logical operations.</p>
+    <div class="card project-card">
+      <h3><i class="fas fa-database"></i> HR Schema</h3>
+      <p>SQL database schema project</p>
+      <a href="https://github.com/iqra0516/HR-schema">View</a>
     </div>
 
-    <div class="project">
-      <h3>Linked List Student System</h3>
-      <p>Student record system using linked list with insert, delete and search operations.</p>
+    <div class="card project-card">
+      <h3><i class="fas fa-table"></i> Scott Schema</h3>
+      <p>Database practice schema</p>
+      <a href="https://github.com/iqra0516/scott-schema">View</a>
     </div>
 
-    <div class="project">
-      <h3>Queue Management System</h3>
-      <p>Customer service system using queue data structure with priority handling.</p>
+    <div class="card project-card">
+      <h3><i class="fas fa-futbol"></i> Sports Management System</h3>
+      <p>System for managing sports data</p>
+      <a href="https://github.com/iqra0516/sportsmanagementsystem">View</a>
+    </div>
+
+    <div class="card project-card">
+      <h3><i class="fas fa-square-root-alt"></i> Math Problem Solver</h3>
+      <p>Problem solving algorithms</p>
+      <a href="https://github.com/iqra0516/mathematical-problem-solving">View</a>
     </div>
 
   </div>
 </section>
 
+<!-- CONTACT (UNCHANGED LINKS) -->
 <section id="contact">
-  <div class="title">CONTACT</div>
-  <div class="contact">
+  <h2 class="section-title">Contact</h2>
 
-    <div>
-      <b>Email</b><br>
-      <span style="color:var(--muted)">your email here</span>
-    </div>
+  <div class="contact-card">
+    <i class="fas fa-envelope"></i>
+    Email:
+    <a href="mailto:iqrazia16175@gmail.com" style="color:var(--accent);text-decoration:none;">
+      iqrazia16175@gmail.com
+    </a>
+  </div>
 
-    <div>
-      <b>GitHub</b><br>
-      <span style="color:var(--muted)">github.com/your-profile</span>
-    </div>
+  <div class="contact-card">
+    <i class="fab fa-github"></i>
+    GitHub:
+    <a href="https://github.com/iqra0516" target="_blank" style="color:var(--accent);text-decoration:none;">
+      github.com/iqra0516
+    </a>
+  </div>
 
-    <div>
-      <b>LinkedIn</b><br>
-      <span style="color:var(--muted)">linkedin.com/in/your-profile</span>
-    </div>
-
+  <div class="contact-card">
+    <i class="fab fa-linkedin"></i>
+    LinkedIn:
+    <a href="https://linkedin.com/in/iqra-zia-891704294" target="_blank" style="color:var(--accent);text-decoration:none;">
+      linkedin.com/in/iqra-zia-891704294
+    </a>
   </div>
 </section>
 
-<footer>
-  © 2026 Iqra Zia · CS Portfolio
-</footer>
+<footer>© 2026 Iqra Zia</footer>
 
 </body>
 </html>
