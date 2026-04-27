@@ -1,171 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iqra Zia | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0b1220,#0f1b2d,#0b1220);
-color:white;
-overflow-x:hidden;
+  background: linear-gradient(120deg,#0b0f1a,#111827,#0b0f1a);
+  color:#eaeaf0;
+  overflow-x:hidden;
+}
+
+/* ANIMATION BACKGROUND */
+body::before{
+  content:"";
+  position:fixed;
+  width:300px;
+  height:300px;
+  background:#7c3aed;
+  filter:blur(120px);
+  top:10%;
+  left:10%;
+  opacity:0.3;
+  animation: float 6s infinite alternate;
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  width:300px;
+  height:300px;
+  background:#06b6d4;
+  filter:blur(120px);
+  bottom:10%;
+  right:10%;
+  opacity:0.2;
+  animation: float 8s infinite alternate;
+}
+
+@keyframes float{
+  from{transform:translateY(0px);}
+  to{transform:translateY(40px);}
 }
 
 /* NAV */
 nav{
-display:flex;
-justify-content:space-between;
-padding:18px 40px;
-position:sticky;
-top:0;
-background:rgba(15,23,42,0.6);
-backdrop-filter:blur(15px);
-border-bottom:1px solid rgba(255,255,255,0.05);
-z-index:100;
-}
-
-nav h2{
-background:linear-gradient(90deg,#7c3aed,#06b6d4);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  position:sticky;
+  top:0;
+  background:rgba(10,15,30,0.8);
+  backdrop-filter:blur(10px);
+  z-index:100;
 }
 
 nav a{
-color:#cbd5e1;
-margin:0 12px;
-text-decoration:none;
-transition:0.3s;
+  color:#aaa;
+  margin-left:20px;
+  text-decoration:none;
 }
 
 nav a:hover{
-color:#06b6d4;
+  color:#7c3aed;
 }
 
-/* HERO (IMPORTANT PART) */
+/* HERO */
 .hero{
-text-align:center;
-padding:140px 10% 100px;
-background:radial-gradient(circle at top,#1e293b,#0b1220);
+  text-align:center;
+  padding:120px 20px;
+  animation: fadeIn 1.5s ease;
 }
 
 .hero h1{
-font-size:3.2rem;
+  font-size:3rem;
 }
 
 .hero span{
-background:linear-gradient(90deg,#7c3aed,#06b6d4);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+  color:#7c3aed;
 }
 
 .hero p{
-color:#94a3b8;
-margin-top:10px;
+  color:#aaa;
+  margin-top:10px;
 }
 
-.badge{
-margin-top:12px;
-color:#38bdf8;
-}
-
-/* SECTIONS FLOW */
+/* SECTIONS */
 section{
-padding:90px 10%;
+  padding:80px 20px;
+  max-width:1000px;
+  margin:auto;
 }
 
-/* LIGHT LOOK SECTION */
 .light{
-background:linear-gradient(180deg,#f8fafc,#eef2ff);
-color:#0f172a;
-border-radius:40px 40px 0 0;
+  background:#0f172a;
+  border-radius:20px;
+  margin:40px auto;
 }
 
-/* DARK SECTION */
 .dark{
-background:linear-gradient(180deg,#0f172a,#0b1220);
+  background:#0b0f1a;
 }
 
-/* HEADINGS */
-h2{
-font-size:2rem;
-margin-bottom:25px;
-}
-
-/* GLASS CARDS */
+/* CARDS */
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
 .card{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,0.1);
-padding:18px;
-border-radius:16px;
-transition:0.4s;
-}
-
-.light .card{
-background:white;
-border:none;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  border-radius:15px;
+  transition:0.3s;
+  backdrop-filter:blur(10px);
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 35px rgba(0,0,0,0.25);
+  transform:translateY(-10px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
 
-/* PROJECT CARD */
-.project{
-background:rgba(255,255,255,0.07);
-border:1px solid rgba(255,255,255,0.1);
-padding:18px;
-border-radius:16px;
-transition:0.3s;
+/* ICONS */
+.card i{
+  font-size:22px;
+  color:#06b6d4;
+  margin-bottom:10px;
 }
 
-.project:hover{
-transform:scale(1.03);
+/* PROJECT */
+.project a{
+  color:#7c3aed;
+  text-decoration:none;
 }
 
-/* BUTTON */
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:10px 22px;
-border-radius:30px;
-background:linear-gradient(90deg,#7c3aed,#06b6d4);
-color:white;
-text-decoration:none;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
-}
-
-/* CONTACT BOX */
-.contact-box{
-display:flex;
-justify-content:space-between;
-padding:14px;
-border-radius:12px;
-background:rgba(255,255,255,0.08);
-margin-top:12px;
+/* CONTACT */
+.contact-card{
+  background:rgba(255,255,255,0.05);
+  padding:15px;
+  border-radius:10px;
+  margin:10px 0;
+  display:flex;
+  gap:10px;
+  align-items:center;
 }
 
 /* ANIMATION */
-@keyframes fade{
-from{opacity:0;transform:translateY(20px)}
-to{opacity:1;transform:translateY(0)}
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
 }
 
-.hero,section{
-animation:fade 0.8s ease;
-}
 </style>
+</head>
+
+<body>
+
+<nav>
+  <div><b>Iqra Zia</b></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Hello, I'm <span>Iqra Zia</span></h1>
+  <p>CS Student | Backend Developer | Problem Solver</p>
+  <p>📍 Gujar Khan, Punjab, Pakistan | FJWU (4th Semester)</p>
+</div>
+
+<section class="dark" id="about">
+<h2>About Me</h2>
+<p style="color:#aaa;line-height:1.8;margin-top:10px;">
+I am a Computer Science student currently in my 4th semester at Fatima Jinnah Women University.
+I am passionate about backend development, data structures, and building scalable systems using C++, Java, SQL, and Python.
+I also explore cloud technologies like Microsoft Azure and enjoy solving real-world logical problems through programming.
+</p>
+</section>
+
+<section class="light" id="skills">
+<h2>Skills</h2>
+<div class="grid">
+
+<div class="card"><i class="fas fa-code"></i>C / C++</div>
+<div class="card"><i class="fab fa-java"></i>Java</div>
+<div class="card"><i class="fab fa-python"></i>Python</div>
+<div class="card"><i class="fas fa-database"></i>SQL</div>
+<div class="card"><i class="fab fa-html5"></i>HTML / CSS</div>
+<div class="card"><i class="fas fa-diagram-project"></i>DSA</div>
+<div class="card"><i class="fab fa-microsoft"></i>Microsoft Azure</div>
+
+</div>
+</section>
+
+<section class="dark" id="hobbies">
+<h2>Hobbies</h2>
+<div class="grid">
+
+<div class="card"><i class="fas fa-cricket-bat-ball"></i>Cricket</div>
+<div class="card"><i class="fas fa-book"></i>Reading</div>
+<div class="card"><i class="fas fa-brain"></i>Problem Solving</div>
+<div class="card"><i class="fas fa-laptop-code"></i>Coding Practice</div>
+
+</div>
+</section>
+
+<section class="light" id="projects">
+<h2>Projects</h2>
+<div class="grid project">
+
+<div class="card">
+<i class="fas fa-calculator"></i>
+Expression Converter<br>
+<a href="https://github.com/iqra0516/Expression-Converter-Evaluator-Using-Stack-Only-">GitHub</a>
+</div>
+
+<div class="card">
+<i class="fas fa-users"></i>
+Customer Service System<br>
+<a href="https://github.com/iqra0516/Customer-Service-Management-System-Using-Queue">GitHub</a>
+</div>
+
+<div class="card">
+<i class="fas fa-user-graduate"></i>
+Student Record System<br>
+<a href="https://github.com/iqra0516/Student-Record-Management-System-Using-Linked-List-Only-">GitHub</a>
+</div>
+
+<div class="card">
+<i class="fas fa-futbol"></i>
+Sports Management System<br>
+<a href="https://github.com/iqra0516/sportsmanagementsystem">GitHub</a>
+</div>
+
+</div>
+</section>
+
+<section class="dark" id="contact">
+<h2>Contact</h2>
+
+<div class="contact-card">
+<i class="fas fa-envelope"></i>
+iqrazia16175@gmail.com
+</div>
+
+<div class="contact-card">
+<i class="fab fa-github"></i>
+github.com/iqra0516
+</div>
+
+<div class="contact-card">
+<i class="fab fa-linkedin"></i>
+linkedin.com/in/iqra-zia-891704294
+</div>
+
+</section>
+
+</body>
+</html>
 
