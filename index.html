@@ -5,106 +5,121 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Iqra Zia | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 :root{
---bg:#fdf6f0;
+--dark:#1e1e2f;
+--primary:#6366f1;
+--secondary:#ec4899;
+--light:#f9fafb;
 --card:#ffffff;
---dark:#2c2c54;
---accent:#7c3aed;
---accent2:#f472b6;
---soft:#f3e8ff;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:var(--bg);color:#333}
+body{background:var(--light);scroll-behavior:smooth}
 
 /* NAV */
 nav{
 display:flex;
 justify-content:space-between;
 padding:1rem 2rem;
-background:rgba(255,255,255,0.8);
-backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.9);
 position:fixed;width:100%;z-index:100;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
-nav a{margin-left:1.5rem;text-decoration:none;color:#555}
-nav a:hover{color:var(--accent)}
+nav a{margin-left:1.5rem;text-decoration:none;color:#555;font-weight:500}
+nav a:hover{color:var(--primary)}
 
 /* HERO */
 .hero{
 height:100vh;
-background:linear-gradient(135deg,#ede9fe,#fce7f3);
+background:linear-gradient(135deg,#6366f1,#ec4899);
+color:white;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:2rem;
 }
 
 .hero h1{
-font-family:'Playfair Display',serif;
-font-size:4rem;
-color:var(--dark);
+font-size:3.5rem;
+font-weight:700;
 }
 
 .hero p{
 margin:1rem 0;
 max-width:600px;
-color:#555;
+opacity:0.9;
 }
 
-.tags span{
-background:white;
-padding:6px 14px;
-margin:5px;
-border-radius:20px;
-font-size:.85rem;
-box-shadow:0 5px 10px rgba(0,0,0,0.05);
+.hero .info{
+margin-top:10px;
+font-size:0.9rem;
+opacity:0.8;
 }
 
 .btn{
 padding:.7rem 1.5rem;
-margin:.5rem;
 border-radius:25px;
+margin:.5rem;
 text-decoration:none;
 display:inline-block;
 }
-.btn1{background:var(--accent);color:white;}
-.btn2{border:1px solid var(--accent);color:var(--accent);}
+.btn1{background:white;color:#333;}
+.btn2{border:1px solid white;color:white;}
 
 .btn:hover{transform:scale(1.05);transition:.3s}
+
+/* SOCIAL */
+.social{
+margin-top:1rem;
+}
+.social a{
+margin:0 10px;
+color:white;
+font-size:1.3rem;
+}
 
 /* SECTIONS */
 section{padding:5rem 2rem;max-width:1100px;margin:auto}
 
 /* ABOUT */
 .about{
-background:var(--soft);
-border-radius:15px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:2rem;
+}
+
+.about-box{
+background:var(--card);
 padding:2rem;
+border-radius:15px;
 box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.about-box i{
+color:var(--primary);
+margin-right:8px;
 }
 
 /* SKILLS */
 .skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:1rem;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
 }
 
-.skill-box{
-background:white;
-padding:1rem;
-border-radius:12px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
+.skill{
+background:var(--primary);
+color:white;
+padding:8px 15px;
+border-radius:20px;
+font-size:0.85rem;
 }
-.skill-box i{font-size:1.5rem;color:var(--accent)}
 
 /* PROJECTS */
 .projects{
@@ -118,15 +133,32 @@ background:white;
 padding:1.2rem;
 border-radius:12px;
 box-shadow:0 8px 20px rgba(0,0,0,0.05);
+transition:.3s;
 }
-.project a{color:var(--accent);text-decoration:none}
+.project:hover{transform:translateY(-5px)}
+
+.project a{color:var(--primary);text-decoration:none}
+
+/* CONTACT */
+.contact{
+display:flex;
+flex-direction:column;
+gap:1rem;
+}
+
+.contact div{
+background:white;
+padding:1rem;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
 
 /* FOOTER */
 footer{
 text-align:center;
 padding:2rem;
-background:#f1f5f9;
-margin-top:2rem;
+background:#111;
+color:white;
 }
 
 </style>
@@ -140,6 +172,7 @@ margin-top:2rem;
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </div>
 </nav>
 
@@ -149,37 +182,67 @@ margin-top:2rem;
 <h1>Iqra Zia</h1>
 
 <p>
-Computer Science Student passionate about backend development, problem solving, and building real-world systems.
-Currently studying at Fatima Jinnah Women University (4th Semester) • Gujar Khan
+Computer Science Student | Backend Developer | Problem Solver
 </p>
 
-<div class="tags">
-<span>C/C++</span>
-<span>Java</span>
-<span>Python</span>
-<span>SQL</span>
-<span>Azure</span>
-<span>SEO</span>
-<span>Freelancing</span>
+<div class="info">
+📍 Gujar Khan • 🎓 Fatima Jinnah Women University (4th Semester)
 </div>
 
-<a href="#projects" class="btn btn1">View Projects</a>
+<div>
+<a href="#projects" class="btn btn1">Projects</a>
 <a href="#contact" class="btn btn2">Contact</a>
+</div>
+
+<div class="social">
+<a href="mailto:iqrazia16175@gmail.com"><i class="fas fa-envelope"></i></a>
+<a href="https://github.com/iqra0516" target="_blank"><i class="fab fa-github"></i></a>
+<a href="https://linkedin.com/in/iqra-zia-891704294" target="_blank"><i class="fab fa-linkedin"></i></a>
+</div>
 
 </section>
 
 <!-- ABOUT -->
 <section id="about">
+
 <h2>About Me</h2>
 
 <div class="about">
+
+<div class="about-box">
 <p>
-I am a dedicated Computer Science student with a strong passion for developing efficient backend systems and solving complex problems using data structures and algorithms. My journey in technology is driven by curiosity, creativity, and the desire to build impactful solutions.
-
-I have hands-on experience in working with databases, object-oriented programming, and system design. Alongside technical development, I am also exploring modern skills like SEO and freelancing to expand my practical exposure in the tech industry.
-
-I believe in continuous learning and consistently challenge myself by building real-world projects that enhance both my logical thinking and development skills.
+<i class="fas fa-user"></i>
+Passionate Computer Science student focused on backend systems and problem solving.
 </p>
+
+<p>
+<i class="fas fa-code"></i>
+Strong grip on Data Structures, OOP, and database systems.
+</p>
+
+<p>
+<i class="fas fa-cloud"></i>
+Exploring Microsoft Azure and modern technologies.
+</p>
+</div>
+
+<div class="about-box">
+<p>
+<i class="fas fa-lightbulb"></i>
+I believe in learning by building real-world projects.
+</p>
+
+<p>
+<i class="fas fa-briefcase"></i>
+Also exploring Freelancing and SEO.
+</p>
+
+<p>
+<i class="fas fa-chart-line"></i>
+Goal: Become a skilled Software Engineer.
+</p>
+</div>
+
 </div>
 
 </section>
@@ -190,20 +253,20 @@ I believe in continuous learning and consistently challenge myself by building r
 
 <div class="skills">
 
-<div class="skill-box"><i class="fas fa-code"></i><p>C/C++</p></div>
-<div class="skill-box"><i class="fab fa-java"></i><p>Java</p></div>
-<div class="skill-box"><i class="fab fa-python"></i><p>Python</p></div>
-<div class="skill-box"><i class="fas fa-database"></i><p>SQL</p></div>
-<div class="skill-box"><i class="fab fa-html5"></i><p>HTML/CSS</p></div>
-<div class="skill-box"><i class="fas fa-project-diagram"></i><p>DSA</p></div>
-<div class="skill-box"><i class="fab fa-microsoft"></i><p>Azure</p></div>
-<div class="skill-box"><i class="fas fa-search"></i><p>SEO</p></div>
-<div class="skill-box"><i class="fas fa-briefcase"></i><p>Freelancing</p></div>
+<div class="skill">C/C++</div>
+<div class="skill">Java</div>
+<div class="skill">Python</div>
+<div class="skill">SQL</div>
+<div class="skill">HTML/CSS</div>
+<div class="skill">DSA</div>
+<div class="skill">Azure</div>
+<div class="skill">SEO</div>
+<div class="skill">Freelancing</div>
 
 </div>
 </section>
 
-<!-- PROJECTS (UNCHANGED) -->
+<!-- PROJECTS -->
 <section id="projects">
 <h2>Projects</h2>
 
@@ -212,51 +275,64 @@ I believe in continuous learning and consistently challenge myself by building r
 <div class="project">
 <h3>Expression Converter</h3>
 <p>Stack based evaluator</p>
-<a href="https://github.com/iqra0516/Expression-Converter-Evaluator-Using-Stack-Only-" target="_blank">View</a>
+<a href="https://github.com/iqra0516/Expression-Converter-Evaluator-Using-Stack-Only-">View</a>
 </div>
 
 <div class="project">
 <h3>Customer Service System</h3>
-<p>Queue based system</p>
-<a href="https://github.com/iqra0516/Customer-Service-Management-System-Using-Queue" target="_blank">View</a>
+<p>Queue system</p>
+<a href="https://github.com/iqra0516/Customer-Service-Management-System-Using-Queue">View</a>
 </div>
 
 <div class="project">
 <h3>Student Record System</h3>
-<p>Linked list records</p>
-<a href="https://github.com/iqra0516/Student-Record-Management-System-Using-Linked-List-Only-" target="_blank">View</a>
+<p>Linked list system</p>
+<a href="https://github.com/iqra0516/Student-Record-Management-System-Using-Linked-List-Only-">View</a>
 </div>
 
 <div class="project">
 <h3>HR Schema</h3>
-<p>SQL database</p>
-<a href="https://github.com/iqra0516/HR-schema" target="_blank">View</a>
+<p>SQL project</p>
+<a href="https://github.com/iqra0516/HR-schema">View</a>
 </div>
 
 <div class="project">
 <h3>Scott Schema</h3>
 <p>Database practice</p>
-<a href="https://github.com/iqra0516/scott-schema" target="_blank">View</a>
+<a href="https://github.com/iqra0516/scott-schema">View</a>
 </div>
 
 <div class="project">
 <h3>Sports Management System</h3>
-<p>System for managing sports data</p>
-<a href="https://github.com/iqra0516/sportsmanagementsystem" target="_blank">View</a>
+<p>Management system</p>
+<a href="https://github.com/iqra0516/sportsmanagementsystem">View</a>
 </div>
 
 <div class="project">
 <h3>Math Problem Solver</h3>
-<p>Problem solving algorithms</p>
-<a href="https://github.com/iqra0516/mathematical-problem-solving" target="_blank">View</a>
+<p>Algorithms</p>
+<a href="https://github.com/iqra0516/mathematical-problem-solving">View</a>
 </div>
 
 </div>
+
 </section>
 
-<!-- FOOTER -->
+<!-- CONTACT -->
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="contact">
+<div>📧 iqrazia16175@gmail.com</div>
+<div>💻 github.com/iqra0516</div>
+<div>🔗 linkedin.com/in/iqra-zia-891704294</div>
+</div>
+
+</section>
+
 <footer>
-<p>© 2026 Iqra Zia • All Rights Reserved</p>
+<p>Iqra Zia Portfolio</p>
 </footer>
 
 </body>
