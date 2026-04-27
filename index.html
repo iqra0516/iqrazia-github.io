@@ -9,190 +9,201 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
+/* BASE */
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-  background: linear-gradient(120deg,#0b0f1a,#111827,#0b0f1a);
-  color:#eaeaf0;
-  overflow-x:hidden;
-}
-
-/* ANIMATION BACKGROUND */
-body::before{
-  content:"";
-  position:fixed;
-  width:300px;
-  height:300px;
-  background:#7c3aed;
-  filter:blur(120px);
-  top:10%;
-  left:10%;
-  opacity:0.3;
-  animation: float 6s infinite alternate;
-}
-
-body::after{
-  content:"";
-  position:fixed;
-  width:300px;
-  height:300px;
-  background:#06b6d4;
-  filter:blur(120px);
-  bottom:10%;
-  right:10%;
-  opacity:0.2;
-  animation: float 8s infinite alternate;
-}
-
-@keyframes float{
-  from{transform:translateY(0px);}
-  to{transform:translateY(40px);}
+background:#0b1220;
+color:#e5e7eb;
+overflow-x:hidden;
 }
 
 /* NAV */
 nav{
-  display:flex;
-  justify-content:space-between;
-  padding:20px 40px;
-  position:sticky;
-  top:0;
-  background:rgba(10,15,30,0.8);
-  backdrop-filter:blur(10px);
-  z-index:100;
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:18px 50px;
+background:rgba(10,15,25,0.6);
+backdrop-filter:blur(12px);
+z-index:100;
 }
 
 nav a{
-  color:#aaa;
-  margin-left:20px;
-  text-decoration:none;
+color:#cbd5e1;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
 }
 
 nav a:hover{
-  color:#7c3aed;
+color:#7c3aed;
 }
 
-/* HERO */
+/* HERO (like reference style) */
 .hero{
-  text-align:center;
-  padding:120px 20px;
-  animation: fadeIn 1.5s ease;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:radial-gradient(circle at top,#1e293b,#0b1220);
+padding:0 20px;
 }
 
 .hero h1{
-  font-size:3rem;
+font-size:3.5rem;
 }
 
 .hero span{
-  color:#7c3aed;
+color:#7c3aed;
 }
 
 .hero p{
-  color:#aaa;
-  margin-top:10px;
+color:#94a3b8;
+margin-top:10px;
+max-width:600px;
+}
+
+.badge{
+margin-top:15px;
+color:#06b6d4;
 }
 
 /* SECTIONS */
 section{
-  padding:80px 20px;
-  max-width:1000px;
-  margin:auto;
+padding:90px 15%;
+opacity:0;
+transform:translateY(50px);
+transition:1s ease;
 }
 
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ALTERNATING STYLE LIKE YOUR REFERENCE */
 .light{
-  background:#0f172a;
-  border-radius:20px;
-  margin:40px auto;
+background:#f8fafc;
+color:#0f172a;
+border-radius:40px;
+margin-top:40px;
 }
 
 .dark{
-  background:#0b0f1a;
+background:#0b1220;
+}
+
+/* TITLES */
+h2{
+font-size:2rem;
+margin-bottom:30px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
 /* CARDS */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+.card{
+background:rgba(255,255,255,0.05);
+padding:18px;
+border-radius:16px;
+transition:0.4s;
+backdrop-filter:blur(10px);
 }
 
-.card{
-  background:rgba(255,255,255,0.05);
-  padding:20px;
-  border-radius:15px;
-  transition:0.3s;
-  backdrop-filter:blur(10px);
+.light .card{
+background:white;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+transform:translateY(-10px);
 }
 
 /* ICONS */
 .card i{
-  font-size:22px;
-  color:#06b6d4;
-  margin-bottom:10px;
+color:#06b6d4;
+margin-bottom:10px;
+font-size:20px;
 }
 
-/* PROJECT */
-.project a{
-  color:#7c3aed;
-  text-decoration:none;
+/* PROJECT LINKS */
+.card a{
+color:#7c3aed;
+text-decoration:none;
+font-size:13px;
 }
 
 /* CONTACT */
-.contact-card{
-  background:rgba(255,255,255,0.05);
-  padding:15px;
-  border-radius:10px;
-  margin:10px 0;
-  display:flex;
-  gap:10px;
-  align-items:center;
+.contact{
+display:flex;
+justify-content:space-between;
+padding:15px;
+background:rgba(255,255,255,0.05);
+border-radius:10px;
+margin-top:10px;
 }
 
 /* ANIMATION */
-@keyframes fadeIn{
-  from{opacity:0; transform:translateY(20px);}
-  to{opacity:1; transform:translateY(0);}
+@keyframes fade{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
 }
+
+.hero{animation:fade 1s ease;}
 
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-  <div><b>Iqra Zia</b></div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
+<div><b>Iqra Zia</b></div>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
-  <h1>Hello, I'm <span>Iqra Zia</span></h1>
-  <p>CS Student | Backend Developer | Problem Solver</p>
-  <p>📍 Gujar Khan, Punjab, Pakistan | FJWU (4th Semester)</p>
+<h1>Hello, I'm <span>Iqra Zia</span></h1>
+<p>Computer Science Student | Backend Developer | Problem Solver</p>
+<p class="badge"><i class="fas fa-location-dot"></i> Gujar Khan, Punjab, Pakistan</p>
+<p class="badge">Fatima Jinnah Women University — 4th Semester</p>
 </div>
 
+<!-- ABOUT -->
 <section class="dark" id="about">
 <h2>About Me</h2>
-<p style="color:#aaa;line-height:1.8;margin-top:10px;">
+<p style="color:#94a3b8;line-height:1.8;">
 I am a Computer Science student currently in my 4th semester at Fatima Jinnah Women University.
-I am passionate about backend development, data structures, and building scalable systems using C++, Java, SQL, and Python.
-I also explore cloud technologies like Microsoft Azure and enjoy solving real-world logical problems through programming.
+I enjoy backend development, algorithms, and database systems.
+I work with C++, Java, Python, and SQL, and I am also exploring Microsoft Azure for cloud computing.
+My goal is to build efficient and real-world scalable systems.
 </p>
 </section>
 
+<!-- SKILLS -->
 <section class="light" id="skills">
 <h2>Skills</h2>
 <div class="grid">
@@ -201,75 +212,106 @@ I also explore cloud technologies like Microsoft Azure and enjoy solving real-wo
 <div class="card"><i class="fab fa-java"></i>Java</div>
 <div class="card"><i class="fab fa-python"></i>Python</div>
 <div class="card"><i class="fas fa-database"></i>SQL</div>
-<div class="card"><i class="fab fa-html5"></i>HTML / CSS</div>
 <div class="card"><i class="fas fa-diagram-project"></i>DSA</div>
-<div class="card"><i class="fab fa-microsoft"></i>Microsoft Azure</div>
+<div class="card"><i class="fab fa-microsoft"></i>Azure</div>
 
 </div>
 </section>
 
-<section class="dark" id="hobbies">
-<h2>Hobbies</h2>
+<!-- EDUCATION -->
+<section class="dark" id="education">
+<h2>Education</h2>
 <div class="grid">
 
-<div class="card"><i class="fas fa-cricket-bat-ball"></i>Cricket</div>
-<div class="card"><i class="fas fa-book"></i>Reading</div>
-<div class="card"><i class="fas fa-brain"></i>Problem Solving</div>
-<div class="card"><i class="fas fa-laptop-code"></i>Coding Practice</div>
+<div class="card"><i class="fas fa-graduation-cap"></i>BSCS — 4th Semester (FJWU)</div>
+<div class="card">ICS — Completed</div>
+<div class="card">Matric — Science</div>
 
 </div>
 </section>
 
+<!-- PROJECTS -->
 <section class="light" id="projects">
 <h2>Projects</h2>
-<div class="grid project">
+<div class="grid">
 
 <div class="card">
 <i class="fas fa-calculator"></i>
 Expression Converter<br>
-<a href="https://github.com/iqra0516/Expression-Converter-Evaluator-Using-Stack-Only-">GitHub</a>
+<a href="https://github.com/iqra0516/Expression-Converter-Evaluator-Using-Stack-Only-">View Project</a>
 </div>
 
 <div class="card">
 <i class="fas fa-users"></i>
 Customer Service System<br>
-<a href="https://github.com/iqra0516/Customer-Service-Management-System-Using-Queue">GitHub</a>
+<a href="https://github.com/iqra0516/Customer-Service-Management-System-Using-Queue">View Project</a>
 </div>
 
 <div class="card">
 <i class="fas fa-user-graduate"></i>
 Student Record System<br>
-<a href="https://github.com/iqra0516/Student-Record-Management-System-Using-Linked-List-Only-">GitHub</a>
+<a href="https://github.com/iqra0516/Student-Record-Management-System-Using-Linked-List-Only-">View Project</a>
+</div>
+
+<div class="card">
+<i class="fas fa-database"></i>
+HR Schema<br>
+<a href="https://github.com/iqra0516/HR-schema">View Project</a>
+</div>
+
+<div class="card">
+<i class="fas fa-table"></i>
+Scott Schema<br>
+<a href="https://github.com/iqra0516/scott-schema">View Project</a>
 </div>
 
 <div class="card">
 <i class="fas fa-futbol"></i>
 Sports Management System<br>
-<a href="https://github.com/iqra0516/sportsmanagementsystem">GitHub</a>
+<a href="https://github.com/iqra0516/sportsmanagementsystem">View Project</a>
+</div>
+
+<div class="card">
+<i class="fas fa-square-root-alt"></i>
+Math Problem Solver<br>
+<a href="https://github.com/iqra0516/mathematical-problem-solving">View Project</a>
 </div>
 
 </div>
 </section>
 
+<!-- CONTACT -->
 <section class="dark" id="contact">
 <h2>Contact</h2>
 
-<div class="contact-card">
+<div class="contact">
 <i class="fas fa-envelope"></i>
 iqrazia16175@gmail.com
 </div>
 
-<div class="contact-card">
+<div class="contact">
 <i class="fab fa-github"></i>
 github.com/iqra0516
 </div>
 
-<div class="contact-card">
+<div class="contact">
 <i class="fab fa-linkedin"></i>
 linkedin.com/in/iqra-zia-891704294
 </div>
 
 </section>
+
+<script>
+const sections=document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+sections.forEach(s=>{
+if(s.getBoundingClientRect().top<600){
+s.classList.add("show");
+}
+});
+});
+</script>
 
 </body>
 </html>
