@@ -3,109 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iqra Zia | Portfolio</title>
+<title>Iqra Zia Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
+/* COLORS LIKE TEMPLATE */
 :root{
 --dark:#0f172a;
 --light:#f8fafc;
 --blue:#3b82f6;
---pink:#fb7185;
---text:#1e293b;
+--pink:#ec4899;
 }
 
-body{scroll-behavior:smooth;}
-
-/* NAV */
+/* NAVBAR */
 nav{
 display:flex;
 justify-content:space-between;
-padding:15px 40px;
-background:rgba(15,23,42,0.9);
-color:#fff;
-position:sticky;top:0;
+padding:20px 60px;
+background:transparent;
+position:fixed;
+width:100%;
+z-index:100;
+color:white;
 }
-nav a{color:#fff;margin-left:20px;text-decoration:none;}
 
-/* HERO */
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+/* HERO SAME STYLE */
 .hero{
 height:100vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
+flex-direction:column;
 text-align:center;
-background:linear-gradient(135deg,#3b82f6,#fb7185);
+background:linear-gradient(135deg,#3b82f6,#ec4899);
 color:white;
-animation:fadeIn 2s ease;
 }
+
 .hero h1{
-font-size:3.5rem;
-font-style:italic;
+font-size:4rem;
+font-weight:700;
 }
+
 .hero p{
 margin:10px 0;
 font-size:1.2rem;
 }
-.hero .skills span{
+
+.hero .tags span{
+padding:6px 14px;
 background:rgba(255,255,255,0.2);
-padding:6px 12px;
 margin:5px;
 border-radius:20px;
 display:inline-block;
 }
 
-/* SECTION */
-section{padding:60px 10%;}
+/* SECTIONS */
+section{
+padding:80px 10%;
+}
 
-.dark{background:var(--dark);color:white;}
-.light{background:var(--light);color:var(--text);}
+.dark{
+background:var(--dark);
+color:white;
+}
 
-/* CARDS */
+.light{
+background:var(--light);
+color:black;
+}
+
+/* CARDS LIKE TEMPLATE */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
 .card{
-background:white;
 padding:20px;
-border-radius:12px;
-margin:10px;
-box-shadow:0 10px 20px rgba(0,0,0,0.1);
+border-radius:15px;
+background:white;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 transition:0.3s;
 }
-.dark .card{background:#1e293b;color:white;}
+
+.dark .card{
+background:#1e293b;
+color:white;
+}
 
 .card:hover{
 transform:translateY(-10px);
 }
 
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+/* PROJECT STYLE */
+.project a{
+color:var(--blue);
+text-decoration:none;
+font-size:14px;
 }
 
-/* PROJECT */
-.project h3 i{color:var(--blue);}
-
 /* CONTACT */
-.contact i{margin-right:10px;color:var(--pink);}
+.contact i{
+margin-right:10px;
+color:var(--pink);
+}
 
 /* FOOTER */
 footer{
-text-align:center;
-padding:20px;
 background:#0f172a;
 color:white;
-}
-
-/* ANIMATION */
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
+text-align:center;
+padding:20px;
 }
 </style>
 </head>
@@ -125,10 +149,10 @@ to{opacity:1;transform:translateY(0);}
 <!-- HERO -->
 <div class="hero">
 <h1>Iqra Zia</h1>
-<p>Computer Science Student • Backend Developer • Problem Solver</p>
-<p>📍 Gujar Khan | 4th Semester - Fatima Jinnah Women University</p>
+<p>Computer Science Student | Backend Developer</p>
+<p>📍 Gujar Khan | 4th Semester</p>
 
-<div class="skills">
+<div class="tags">
 <span>Java</span>
 <span>Python</span>
 <span>SQL</span>
@@ -142,68 +166,93 @@ to{opacity:1;transform:translateY(0);}
 <section class="light" id="about">
 <h2>About Me</h2>
 <p>
-I am a passionate Computer Science student currently studying in 4th semester at Fatima Jinnah Women University.
-I specialize in backend development, data structures, and database systems. I enjoy solving complex problems
-and building efficient systems. I am also exploring cloud technologies like Microsoft Azure and expanding my
-skills in SEO and freelancing.
+I am a passionate Computer Science student at Fatima Jinnah Women University (4th Semester).
+I have strong interest in backend development, data structures, and database systems.
+I enjoy solving real-world problems using efficient algorithms and continuously improving my
+skills through practical projects. I am also exploring Microsoft Azure, SEO, and freelancing.
 </p>
 </section>
 
-<!-- HOBBIES -->
+<!-- EDUCATION -->
 <section class="dark">
-<h2>Hobbies</h2>
+<h2>Education</h2>
 <div class="grid">
-<div class="card">🏏 Cricket</div>
-<div class="card">📚 Reading</div>
-<div class="card">🧠 Problem Solving</div>
-<div class="card">💻 Coding</div>
+<div class="card">
+<h3>BCS - Computer Science</h3>
+<p>Fatima Jinnah Women University</p>
+<p>2024 - Present</p>
+</div>
+
+<div class="card">
+<h3>ICS</h3>
+<p>Completed</p>
+</div>
+
+<div class="card">
+<h3>Matric</h3>
+<p>Completed</p>
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section class="light">
+<h2>Skills</h2>
+<div class="grid">
+<div class="card"><i class="fab fa-java"></i> Java</div>
+<div class="card"><i class="fab fa-python"></i> Python</div>
+<div class="card"><i class="fas fa-database"></i> SQL</div>
+<div class="card"><i class="fab fa-html5"></i> HTML/CSS</div>
+<div class="card"><i class="fab fa-microsoft"></i> Azure</div>
+<div class="card"><i class="fas fa-search"></i> SEO</div>
+<div class="card"><i class="fas fa-laptop"></i> Freelancing</div>
 </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="light" id="projects">
+<section class="dark" id="projects">
 <h2>Projects</h2>
 <div class="grid">
 
 <div class="card project">
-<h3><i class="fas fa-calculator"></i> Expression Converter</h3>
+<h3>Expression Converter</h3>
 <p>Stack based evaluator</p>
 <a href="https://github.com/iqra0516/Expression-Converter-Evaluator-Using-Stack-Only-">View</a>
 </div>
 
 <div class="card project">
-<h3><i class="fas fa-users"></i> Customer Service System</h3>
-<p>Queue based system</p>
+<h3>Customer Service System</h3>
+<p>Queue system</p>
 <a href="https://github.com/iqra0516/Customer-Service-Management-System-Using-Queue">View</a>
 </div>
 
 <div class="card project">
-<h3><i class="fas fa-user-graduate"></i> Student Record</h3>
-<p>Linked List system</p>
+<h3>Student Record System</h3>
+<p>Linked List</p>
 <a href="https://github.com/iqra0516/Student-Record-Management-System-Using-Linked-List-Only-">View</a>
 </div>
 
 <div class="card project">
-<h3><i class="fas fa-database"></i> HR Schema</h3>
-<p>SQL database</p>
+<h3>HR Schema</h3>
+<p>SQL Database</p>
 <a href="https://github.com/iqra0516/HR-schema">View</a>
 </div>
 
 <div class="card project">
-<h3><i class="fas fa-table"></i> Scott Schema</h3>
-<p>Database practice</p>
+<h3>Scott Schema</h3>
+<p>Practice DB</p>
 <a href="https://github.com/iqra0516/scott-schema">View</a>
 </div>
 
 <div class="card project">
-<h3><i class="fas fa-futbol"></i> Sports System</h3>
+<h3>Sports Management System</h3>
 <p>Management system</p>
 <a href="https://github.com/iqra0516/sportsmanagementsystem">View</a>
 </div>
 
 <div class="card project">
-<h3><i class="fas fa-square-root-alt"></i> Math Solver</h3>
-<p>Algorithm based solver</p>
+<h3>Math Problem Solver</h3>
+<p>Algorithms</p>
 <a href="https://github.com/iqra0516/mathematical-problem-solving">View</a>
 </div>
 
@@ -211,7 +260,7 @@ skills in SEO and freelancing.
 </section>
 
 <!-- CONTACT -->
-<section class="dark" id="contact">
+<section class="light" id="contact">
 <h2>Contact</h2>
 
 <p class="contact"><i class="fas fa-envelope"></i>
