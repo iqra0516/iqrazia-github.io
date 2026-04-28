@@ -9,15 +9,14 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
-  --bg:#f5f0eb;
-  --surface:#ede8e1;
-  --dark:#1a1410;
-  --mid:#4a3f35;
-  --muted:#8a7e74;
-  --accent:#b05e3a;
-  --accent2:#2d6a4f;
-  --gold:#c9923f;
-  --white:#fffdf9;
+  --bg:#0b0b14;
+  --surface:#10101e;
+  --dark:#e8e6f4;
+  --mid:#a09bc4;
+  --muted:#5c5880;
+  --accent:#a78bfa;
+  --accent2:#818cf8;
+  --white:#13132a;
 }
 html{scroll-behavior:smooth;}
 
@@ -34,9 +33,9 @@ nav{
   z-index:100;
   display:flex;justify-content:space-between;align-items:center;
   padding:1.1rem 3rem;
-  background:rgba(245,240,235,0.85);
+  background:rgba(11,11,20,0.90);
   backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(176,94,58,0.15);
+  border-bottom:1px solid rgba(167,139,250,0.12);
 }
 .nav-logo{
   font-family:'DM Serif Display',serif;
@@ -64,13 +63,13 @@ nav{
 .hero-bg{
   position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 600px 600px at 80% 20%, rgba(201,146,63,.10) 0%, transparent 70%),
-    radial-gradient(ellipse 400px 400px at 10% 80%, rgba(176,94,58,.08) 0%, transparent 70%);
+    radial-gradient(ellipse 600px 600px at 75% 20%, rgba(139,92,246,.13) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 500px at 10% 80%, rgba(99,102,241,.09) 0%, transparent 70%);
 }
 .hero-line{
   position:absolute;top:0;bottom:0;left:52%;
   width:1px;
-  background:linear-gradient(180deg, transparent, rgba(176,94,58,.25), transparent);
+  background:linear-gradient(180deg, transparent, rgba(167,139,250,.18), transparent);
 }
 .hero-content{
   position:relative;max-width:620px;
@@ -79,7 +78,7 @@ nav{
   display:inline-flex;align-items:center;gap:8px;
   font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
   color:var(--accent);
-  border:1px solid rgba(176,94,58,.3);
+  border:1px solid rgba(167,139,250,.25);
   padding:.35rem .9rem;border-radius:30px;
   margin-bottom:1.8rem;
   animation:fadeUp .6s ease both;
@@ -130,14 +129,15 @@ h1.hero-name em{
   display:inline-flex;align-items:center;gap:8px;
 }
 .btn-primary{
-  background:var(--accent);color:var(--white);
-  box-shadow:0 4px 20px rgba(176,94,58,.3);
+  background:linear-gradient(135deg,#8b5cf6,#6366f1);
+  color:#fff;
+  box-shadow:0 4px 20px rgba(139,92,246,.35);
 }
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(176,94,58,.4);}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(139,92,246,.45);}
 .btn-outline{
-  border:1.5px solid var(--mid);color:var(--mid);
+  border:1.5px solid rgba(167,139,250,.4);color:var(--accent);
 }
-.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+.btn-outline:hover{background:rgba(167,139,250,.1);border-color:var(--accent);}
 
 .hero-float{
   position:absolute;right:6%;top:50%;transform:translateY(-50%);
@@ -147,13 +147,13 @@ h1.hero-name em{
 .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;}
 .stat-box{
   background:var(--white);
-  border:1px solid rgba(176,94,58,.15);
+  border:1px solid rgba(167,139,250,.14);
   border-radius:14px;padding:1.4rem 1rem;
   text-align:center;
-  box-shadow:0 2px 16px rgba(26,20,16,.06);
+  box-shadow:0 2px 20px rgba(11,11,20,.6);
   transition:.25s;
 }
-.stat-box:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(26,20,16,.1);}
+.stat-box:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(139,92,246,.15);}
 .stat-num{
   font-family:'DM Serif Display',serif;
   font-size:2rem;color:var(--accent);
@@ -180,7 +180,7 @@ h2.sec-title{
 /* divider */
 .divider{
   width:100%;height:1px;
-  background:linear-gradient(90deg,transparent,rgba(176,94,58,.2),transparent);
+  background:linear-gradient(90deg,transparent,rgba(167,139,250,.15),transparent);
   margin:0 3rem;
   max-width:calc(100% - 6rem);
 }
@@ -194,14 +194,14 @@ h2.sec-title{
 .tag{
   font-size:12px;font-weight:500;
   padding:.3rem .8rem;border-radius:20px;
-  background:rgba(176,94,58,.1);
+  background:rgba(167,139,250,.08);
   color:var(--accent);
-  border:1px solid rgba(176,94,58,.2);
+  border:1px solid rgba(167,139,250,.18);
 }
 .about-card{
-  background:var(--white);border:1px solid rgba(176,94,58,.15);
+  background:var(--white);border:1px solid rgba(167,139,250,.14);
   border-radius:18px;padding:2rem;
-  box-shadow:0 4px 24px rgba(26,20,16,.07);
+  box-shadow:0 4px 28px rgba(11,11,20,.7);
 }
 .about-card h3{
   font-family:'DM Serif Display',serif;
@@ -209,7 +209,7 @@ h2.sec-title{
 }
 .edu-item{
   display:flex;align-items:flex-start;gap:.8rem;
-  padding:.8rem 0;border-bottom:1px solid rgba(176,94,58,.1);
+  padding:.8rem 0;border-bottom:1px solid rgba(167,139,250,.08);
 }
 .edu-item:last-child{border:none;}
 .edu-dot{
@@ -228,30 +228,30 @@ h2.sec-title{
 }
 .skill-card{
   background:var(--white);
-  border:1px solid rgba(176,94,58,.12);
+  border:1px solid rgba(167,139,250,.10);
   border-radius:14px;
   padding:1.4rem 1rem;
   text-align:center;
   transition:.3s;
-  box-shadow:0 2px 10px rgba(26,20,16,.04);
+  box-shadow:0 2px 14px rgba(11,11,20,.5);
   cursor:default;
 }
 .skill-card:hover{
   transform:translateY(-5px);
   border-color:var(--accent);
-  box-shadow:0 10px 28px rgba(176,94,58,.15);
+  box-shadow:0 10px 28px rgba(139,92,246,.15);
 }
 .skill-card i{font-size:1.7rem;color:var(--accent);margin-bottom:.6rem;display:block;}
 .skill-card p{font-size:13px;font-weight:500;color:var(--mid);}
 
-/* NEW skills section with categories */
+/* skills categories */
 .skills-cat{margin-bottom:2.5rem;}
 .skills-cat-title{
   font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
   color:var(--muted);margin-bottom:1rem;
   display:flex;align-items:center;gap:8px;
 }
-.skills-cat-title::after{content:'';flex:1;height:1px;background:rgba(176,94,58,.15);}
+.skills-cat-title::after{content:'';flex:1;height:1px;background:rgba(167,139,250,.12);}
 
 /* ─── PROJECTS ─── */
 .projects-grid{
@@ -261,21 +261,21 @@ h2.sec-title{
 }
 .proj-card{
   background:var(--white);
-  border:1px solid rgba(176,94,58,.12);
+  border:1px solid rgba(167,139,250,.10);
   border-radius:16px;
   padding:1.6rem;
   transition:.3s;
-  box-shadow:0 2px 12px rgba(26,20,16,.05);
+  box-shadow:0 2px 14px rgba(11,11,20,.5);
   display:flex;flex-direction:column;gap:.8rem;
 }
 .proj-card:hover{
   transform:translateY(-5px);
   border-color:var(--accent);
-  box-shadow:0 12px 32px rgba(176,94,58,.15);
+  box-shadow:0 12px 32px rgba(139,92,246,.15);
 }
 .proj-icon{
   width:44px;height:44px;border-radius:12px;
-  background:rgba(176,94,58,.1);
+  background:rgba(167,139,250,.10);
   display:flex;align-items:center;justify-content:center;
   color:var(--accent);font-size:1.1rem;
 }
@@ -285,7 +285,7 @@ h2.sec-title{
 .proj-tag{
   font-size:11px;font-weight:600;letter-spacing:1px;
   padding:.25rem .7rem;border-radius:20px;
-  background:rgba(45,106,79,.1);color:var(--accent2);
+  background:rgba(99,102,241,.10);color:var(--accent2);
 }
 .proj-link{
   display:inline-flex;align-items:center;gap:5px;
@@ -302,12 +302,12 @@ h2.sec-title{
   gap:1rem;
 }
 .hobby-card{
-  background:var(--white);border:1px solid rgba(176,94,58,.12);
+  background:var(--white);border:1px solid rgba(167,139,250,.10);
   border-radius:14px;padding:1.6rem 1rem;text-align:center;
   transition:.3s;
 }
-.hobby-card:hover{transform:translateY(-4px);border-color:var(--gold);}
-.hobby-card i{font-size:1.8rem;color:var(--gold);margin-bottom:.6rem;display:block;}
+.hobby-card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 8px 24px rgba(139,92,246,.12);}
+.hobby-card i{font-size:1.8rem;color:var(--accent);margin-bottom:.6rem;display:block;}
 .hobby-card p{font-size:13px;color:var(--mid);font-weight:500;}
 
 /* ─── CONTACT ─── */
@@ -321,16 +321,16 @@ h2.sec-title{
 .contact-item{
   display:flex;align-items:center;gap:1rem;
   background:var(--white);
-  border:1px solid rgba(176,94,58,.15);
+  border:1px solid rgba(167,139,250,.12);
   border-radius:12px;padding:1rem 1.2rem;
   text-decoration:none;
   transition:.25s;
-  box-shadow:0 2px 10px rgba(26,20,16,.04);
+  box-shadow:0 2px 12px rgba(11,11,20,.4);
 }
-.contact-item:hover{border-color:var(--accent);transform:translateX(4px);}
+.contact-item:hover{border-color:var(--accent);transform:translateX(4px);box-shadow:0 6px 22px rgba(139,92,246,.13);}
 .contact-item-icon{
   width:40px;height:40px;border-radius:10px;
-  background:rgba(176,94,58,.1);
+  background:rgba(167,139,250,.10);
   display:flex;align-items:center;justify-content:center;
   color:var(--accent);font-size:1rem;flex-shrink:0;
 }
@@ -341,9 +341,9 @@ h2.sec-title{
 .contact-item:hover .contact-item-arrow{color:var(--accent);}
 
 .contact-side{
-  background:var(--white);border:1px solid rgba(176,94,58,.15);
+  background:var(--white);border:1px solid rgba(167,139,250,.14);
   border-radius:18px;padding:2rem;
-  box-shadow:0 4px 24px rgba(26,20,16,.07);
+  box-shadow:0 4px 28px rgba(11,11,20,.6);
 }
 .contact-side h3{
   font-family:'DM Serif Display',serif;
@@ -360,7 +360,7 @@ h2.sec-title{
 
 /* ─── FOOTER ─── */
 footer{
-  background:var(--dark);color:rgba(255,255,255,.5);
+  background:#07070f;color:rgba(255,255,255,.35);
   text-align:center;padding:2rem;font-size:13px;
 }
 footer span{color:var(--accent);}
@@ -403,9 +403,9 @@ footer span{color:var(--accent);}
       Computer Science Student
     </div>
     <h1 class="hero-name">Hello, I'm<br><em>Iqra Zia</em></h1>
-    <p class="hero-role">Backend Developer &nbsp;·&nbsp; Problem Solver &nbsp;·&nbsp; CS Undergraduate</p>
+    <p class="hero-role">Computer Science Student &nbsp;·&nbsp; Problem Solver</p>
     <p class="hero-desc">
-      Passionate about building efficient backend systems, working with databases, and solving real-world problems through clean, scalable code.
+      Passionate about building efficient systems, working with databases, and solving real-world problems through clean, scalable code.
     </p>
     <div class="hero-location">
       <i class="fas fa-map-marker-alt"></i>
@@ -449,7 +449,7 @@ footer span{color:var(--accent);}
   <div class="about-grid">
     <div class="about-text">
       <p>
-        I am a passionate Computer Science student with a strong interest in solving real-world problems using efficient algorithms and data structures. I enjoy building backend systems and working with databases to design scalable and optimized solutions.
+        I am a passionate Computer Science student with a strong interest in solving real-world problems using efficient algorithms and data structures. I enjoy building systems and working with databases to design scalable and optimized solutions.
       </p>
       <p>
         My academic journey at <strong>Fatima Jinnah Women University</strong> has deepened my knowledge in OOP, SQL, system design, Computer Networks, and Digital Logic Design. I continuously explore technologies like Microsoft Azure to expand my skill set.
@@ -458,7 +458,6 @@ footer span{color:var(--accent);}
         I believe in learning by building — I actively work on projects to bridge theory with practical knowledge. My goal is to grow as a software engineer and contribute to impactful, innovative solutions.
       </p>
       <div class="about-tags">
-        <span class="tag">Backend Development</span>
         <span class="tag">Data Structures</span>
         <span class="tag">SQL & Databases</span>
         <span class="tag">OOP</span>
@@ -482,7 +481,7 @@ footer span{color:var(--accent);}
         <div class="edu-dot" style="background:var(--gold)"></div>
         <div>
           <div class="edu-title">ICS — Intermediate</div>
-          <div class="edu-sub">Pre-Engineering &nbsp;·&nbsp; <span>Completed</span></div>
+          <div class="edu-sub">Computer Science &nbsp;·&nbsp; <span>Completed</span></div>
         </div>
       </div>
 
@@ -677,7 +676,7 @@ footer span{color:var(--accent);}
     <div class="contact-side">
       <h3>Let's Connect</h3>
       <p>
-        Currently in my 4th semester at Fatima Jinnah Women University, Rawalpindi. Open to internships, collaborative projects, and learning opportunities in backend development and software engineering.
+        Currently in my 4th semester at Fatima Jinnah Women University, Rawalpindi. Open to internships, collaborative projects, and learning opportunities in software engineering.
       </p>
       <div class="availability">Available for Opportunities</div>
     </div>
