@@ -142,23 +142,21 @@ nav.is-light .links a:hover{color:var(--purple2);}
 
 .hero-role{
   margin-top:1rem;font-size:1.15rem;
-  color:var(--d-muted);letter-spacing:.5px;
+  color:#b0a8d0;letter-spacing:.5px;
   animation:slideUp .7s .35s both;
 }
-
 .hero-desc{
-  margin-top:1.3rem;color:#5e5878;
+  margin-top:1.3rem;color:#a09ac0;
   font-size:16px;line-height:1.9;max-width:500px;
   animation:slideUp .7s .45s both;
 }
-
 .hero-locs{
   margin-top:1rem;display:flex;flex-direction:column;gap:.4rem;
-  animation:slideUp .7s .5s both;
+  animation:slideUp .7s .05s both;
 }
 .hero-loc{
   display:flex;align-items:center;gap:7px;
-  font-size:14px;color:#6b648a;
+  font-size:14px;color:#b8b0d8;
 }
 .hero-loc i{color:var(--lilac);width:14px;}
 
@@ -252,15 +250,15 @@ nav.is-light .links a:hover{color:var(--purple2);}
 /* ── ABOUT ── */
 #about{background:var(--l-bg);}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start;}
-.about-p{font-size:16px;line-height:1.95;color:var(--l-muted);margin-bottom:1.1rem;}
-.about-p strong{color:var(--purple2);}
+.about-p{font-size:16px;line-height:1.95;color:#2a2540;margin-bottom:1.1rem;}
+.about-p strong{color:#4c1d95;font-weight:700;}
 .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem;}
 .tag{
   font-size:12px;font-weight:600;
   padding:.35rem 1rem;border-radius:20px;
-  background:rgba(109,40,217,.07);
-  color:var(--purple2);
-  border:1px solid rgba(109,40,217,.18);
+  background:rgba(109,40,217,.09);
+  color:#4c1d95;
+  border:1px solid rgba(109,40,217,.25);
 }
 
 /* edu card */
@@ -280,14 +278,15 @@ nav.is-light .links a:hover{color:var(--purple2);}
 }
 .edu-row:last-child{border:none;padding-bottom:0;}
 .edu-dot{
-  width:11px;height:11px;border-radius:50%;
+  width:12px;height:12px;border-radius:50%;
   flex-shrink:0;margin-top:5px;
+  border:2px solid rgba(139,92,246,.3);
 }
 .dot-purple{background:var(--purple);}
-.dot-indigo{background:#6366f1;}
-.dot-soft{background:#a78bfa;}
-.edu-name{font-size:15px;font-weight:700;color:var(--l-text);}
-.edu-info{font-size:13px;color:var(--l-muted);margin-top:3px;line-height:1.6;}
+.dot-indigo{background:var(--purple);}
+.dot-soft{background:var(--purple);}
+.edu-name{font-size:15px;font-weight:700;color:#0f0c1e;}
+.edu-info{font-size:13px;color:#2a2540;margin-top:3px;line-height:1.6;}
 .edu-info span{color:var(--purple2);font-weight:600;}
 
 /* ── SKILLS ── */
@@ -313,7 +312,7 @@ nav.is-light .links a:hover{color:var(--purple2);}
   box-shadow:0 12px 30px rgba(109,40,217,.25);
 }
 .sk-card i{font-size:1.8rem;color:var(--lilac);margin-bottom:.6rem;display:block;}
-.sk-card p{font-size:14px;font-weight:500;color:var(--d-muted);}
+.sk-card p{font-size:14px;font-weight:500;color:#c8c2e8;}
 
 /* ── PROJECTS ── */
 #projects{background:var(--l-bg2);}
@@ -337,8 +336,8 @@ nav.is-light .links a:hover{color:var(--purple2);}
   display:flex;align-items:center;justify-content:center;
   color:var(--purple2);font-size:1.2rem;
 }
-.proj-card h3{font-size:16px;font-weight:700;color:var(--l-text);}
-.proj-card p{font-size:14px;color:var(--l-muted);line-height:1.7;flex:1;}
+.proj-card h3{font-size:16px;font-weight:700;color:#0f0c1e;}
+.proj-card p{font-size:14px;color:#2a2540;line-height:1.7;flex:1;}
 .proj-foot{display:flex;align-items:center;justify-content:space-between;}
 .proj-tag{
   font-size:11px;font-weight:700;letter-spacing:.5px;
@@ -368,12 +367,12 @@ nav.is-light .links a:hover{color:var(--purple2);}
   box-shadow:0 12px 28px rgba(109,40,217,.22);
 }
 .hob-card i{font-size:2.2rem;color:var(--lilac);margin-bottom:.8rem;display:block;}
-.hob-card p{font-size:15px;font-weight:600;color:var(--d-muted);}
+.hob-card p{font-size:15px;font-weight:600;color:#c8c2e8;}
 
 /* ── CONTACT ── */
 #contact{background:var(--l-bg);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
-.c-intro{font-size:16px;line-height:1.95;color:var(--l-muted);margin-bottom:2rem;}
+.c-intro{font-size:16px;line-height:1.95;color:#2a2540;margin-bottom:2rem;}
 .c-links{display:flex;flex-direction:column;gap:1rem;}
 .c-item{
   display:flex;align-items:center;gap:1.1rem;
@@ -391,8 +390,8 @@ nav.is-light .links a:hover{color:var(--purple2);}
   display:flex;align-items:center;justify-content:center;
   color:var(--purple2);font-size:1.05rem;flex-shrink:0;
 }
-.c-lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--l-muted);}
-.c-val{font-size:14px;font-weight:600;color:var(--l-text);}
+.c-lbl{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#6b608a;}
+.c-val{font-size:14px;font-weight:600;color:#0f0c1e;}
 .c-arr{color:var(--l-muted);font-size:13px;margin-left:auto;transition:.25s;}
 .c-item:hover .c-arr{color:var(--purple);transform:translateX(3px);}
 
@@ -412,7 +411,7 @@ nav.is-light .links a:hover{color:var(--purple2);}
   font-family:'Playfair Display',serif;
   font-size:1.9rem;margin-bottom:1.1rem;position:relative;
 }
-.contact-aside p{font-size:15px;line-height:1.85;opacity:.8;position:relative;}
+.contact-aside p{font-size:15px;line-height:1.85;opacity:1;color:#f0ebff;position:relative;}
 .avail-badge{
   display:inline-flex;align-items:center;gap:8px;
   margin-top:1.6rem;font-size:12px;font-weight:700;letter-spacing:.5px;
@@ -427,7 +426,7 @@ nav.is-light .links a:hover{color:var(--purple2);}
 footer{
   background:var(--d-bg);
   text-align:center;padding:2.2rem;
-  font-size:13px;color:#2e2950;border-top:1px solid var(--d-border);
+  font-size:13px;color:#c4bce8;border-top:1px solid var(--d-border);
 }
 footer span{color:var(--lilac);}
 
@@ -468,14 +467,15 @@ footer span{color:var(--lilac);}
 
   <div class="hero-wrap">
     <div>
+      <!-- location bar -->
+      <div class="hero-locs" style="margin-bottom:1.4rem;margin-top:0;">
+        <div class="hero-loc"><i class="fas fa-university"></i> Fatima Jinnah Women University, Rawalpindi — 4th Semester</div>
+        <div class="hero-loc"><i class="fas fa-map-marker-alt"></i> Gujar Khan, Punjab, Pakistan</div>
+      </div>
       <div class="hero-badge"><span class="badge-dot"></span>Computer Science Student</div>
       <h1 class="hero-name">Hello, I'm<br><em>Iqra Zia</em></h1>
       <p class="hero-role">CS Undergraduate &nbsp;·&nbsp; Problem Solver</p>
       <p class="hero-desc">Passionate about building efficient systems, working with databases, and solving real-world problems through clean, scalable code.</p>
-      <div class="hero-locs">
-        <div class="hero-loc"><i class="fas fa-university"></i> Fatima Jinnah Women University, Rawalpindi — 4th Semester</div>
-        <div class="hero-loc"><i class="fas fa-map-marker-alt"></i> Gujar Khan, Punjab, Pakistan</div>
-      </div>
       <div class="hero-btns">
         <a href="#projects" class="btn btn-fill"><i class="fas fa-folder-open"></i>View Projects</a>
         <a href="#contact"  class="btn btn-line"><i class="fas fa-paper-plane"></i>Get in Touch</a>
